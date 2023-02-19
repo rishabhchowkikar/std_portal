@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Login from "./pages/Login/login";
 import Dashboard from "./pages/Dashboard/dashboard";
+import Home from "./pages/Home/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
       <Routes>
         <Route index element={<App />} />
         <Route path="login" element={<Login />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard />}>
+          <Route path="home" element={<Home />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

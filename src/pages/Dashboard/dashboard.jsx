@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import Logo from "../../assests/logocuh.png";
 import Image from "../../assests/tree.jpg";
 import "./dashboard.css";
-import Item from "antd/es/list/Item";
+import { Menu } from "antd";
+import { HomeOutlined } from "@ant-design/icons/lib/components/AntdIcon";
 const Dashboard = () => {
   const [authenticated, setauthenticated] = useState(false);
   useEffect(() => {
@@ -42,13 +43,21 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="dash_route">
-              <div className="dash_grp">
-                <h3>Academics</h3>
-                {/* <Item /> */}
-              </div>
+              <Menu
+                items={[
+                  { label: "Home" },
+                  { label: "Academics" },
+                  { label: "Examination" },
+                  { label: "Hostel" },
+                  { label: "Contact Us" },
+                ]}
+                className="dash_menu"
+              >
+                {" "}
+              </Menu>
             </div>
           </div>
-          <div className="dashboard_outlet">i am outlet</div>
+          <div className="dashboard_outlet">there would be outlet</div>
         </div>
       </div>
     );

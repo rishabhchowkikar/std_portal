@@ -107,14 +107,20 @@
   border: 5px solid white;
 }
 .dash_route {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .dash_grp {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
+}
+
+.dash_menu {
+  background: initial;
+  color: black;
+  font-weight: bold;
 }
 
 /* slider section */
