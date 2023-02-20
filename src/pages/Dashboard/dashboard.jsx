@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
-
+import { useNavigate, Outlet } from "react-router-dom";
 import Logo from "../../assests/logocuh.png";
 import Image from "../../assests/tree.jpg";
 import "./dashboard.css";
 import { Menu } from "antd";
-import { HomeOutlined } from "@ant-design/icons/lib/components/AntdIcon";
+import {
+  AppstoreFilled,
+  BookOutlined,
+  ContactsOutlined,
+  HomeFilled,
+  PaperClipOutlined,
+} from "@ant-design/icons";
 const Dashboard = () => {
+  const Navigate = useNavigate();
   const [authenticated, setauthenticated] = useState(false);
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -44,12 +51,51 @@ const Dashboard = () => {
             </div>
             <div className="dash_route">
               <Menu
+                onClick={({ key }) => {
+                  Navigate(key);
+                  console.log("hello");
+                }}
+                defaultSelectedKeys={[window.location.pathname]}
                 items={[
-                  { label: "Home" },
-                  { label: "Academics" },
-                  { label: "Examination" },
-                  { label: "Hostel" },
-                  { label: "Contact Us" },
+                  {
+                    label: "Home",
+                    key: "/dashboard/home",
+                    icon: <AppstoreFilled />,
+                  },
+                  {
+                    label: "Academics",
+                    icon: <BookOutlined />,
+                    children: [
+                      { label: "Student Subject", key: "" },
+                      { label: "Time Table", key: "" },
+                      { label: "Attendence", key: "" },
+                      { label: "Minor Program Registration", key: "" },
+                    ],
+                  },
+                  {
+                    label: "Examination",
+                    icon: <PaperClipOutlined />,
+                    children: [
+                      { label: "Internal Marks Details", key: "" },
+                      { label: "Earlier Marks Details", key: "" },
+                      { label: "Current Semester Result", key: "" },
+                      { label: "Exam Marks Details", key: "" },
+                      { label: "Exam Registration", key: "" },
+                    ],
+                  },
+                  {
+                    label: "Hostel",
+                    icon: <HomeFilled />,
+                    children: [
+                      { label: "Hostel Room Detail", key: "" },
+                      { label: "Instruction Guide", key: "" },
+                    ],
+                  },
+                  {
+                    label: "Contact Us",
+                    key: "/dashboard/contact",
+                    icon: <ContactsOutlined />,
+                  },
                 ]}
                 className="dash_menu"
               >
@@ -57,7 +103,9 @@ const Dashboard = () => {
               </Menu>
             </div>
           </div>
-          <div className="dashboard_outlet">there would be outlet</div>
+          <div className="dashboard_outlet">
+            <Outlet />
+          </div>
         </div>
       </div>
     );

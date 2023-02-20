@@ -44,7 +44,7 @@
   font-size: 20px;
   font-weight: bold;
   background: initial;
-  padding: 20px;
+  padding: 12px;
   width: 130px;
   color: white;
   border: 2px solid white;
@@ -120,7 +120,8 @@
 .dash_menu {
   background: initial;
   color: black;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: bolder;
 }
 
 /* slider section */
