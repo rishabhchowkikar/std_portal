@@ -9,6 +9,8 @@ import Dashboard from "./pages/Dashboard/dashboard";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/contact";
 import { Content } from "antd/es/layout/layout";
+import RoomDetails from "./pages/room-details/index"
+import HostelRegistrationForm from "./pages/hostel-registration-form/index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +22,8 @@ root.render(
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="home" element={<Home />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="room-details" element={<RoomDetails />} />
+          <Route path="hostel-registration" element={<HostelRegistrationForm />} />
         </Route>
       </Routes>
     </BrowserRouter>

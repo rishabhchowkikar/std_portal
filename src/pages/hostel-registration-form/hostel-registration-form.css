@@ -1,0 +1,62 @@
+.hostel-registration-form {
+    background-color: blue;
+  }
+  
+ .hostel-registration-form .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+   
+  }
+ .hostel-registration-form .card {
+    position: relative;
+    /* margin: 150px auto; */
+    width: 450px;
+    padding: 10px 30px;
+    border-radius: 16px;
+    background-color: white;
+  }
+ .hostel-registration-form h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+  }
+  
+ .hostel-registration-form .card div {
+    margin-top: 12px;
+  }
+ .hostel-registration-form label {
+    color: grey;
+    padding-left: 4px;
+    font-size: 16px;
+  }
+ .hostel-registration-form error {
+    font-size: 10px;
+    
+  }
+ .hostel-registration-form input {
+    width: 450px;
+    height: 30px;
+    background-color: #edf2f5;
+    font-size: 24px;
+    margin-bottom: 5px;
+    border: 0;
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.28);
+  }
+  
+  .hostel-registration-form .button {
+    cursor: pointer;
+    width: 160px;
+    color: #fff;
+    height: 40px;
+    background-color: blue;
+    border: 0;
+    font-weight: 400;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 0.25rem;
+    margin-top: 14px;
+  }

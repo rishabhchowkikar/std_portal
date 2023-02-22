@@ -87,7 +87,8 @@ const Dashboard = () => {
                     label: "Hostel",
                     icon: <HomeFilled />,
                     children: [
-                      { label: "Hostel Room Detail", key: "" },
+                      { label: "Hostel Room Detail", key: "/dashboard/room-details" },
+                      { label: "Registration Form", key: "/dashboard/hostel-registration" },
                       { label: "Instruction Guide", key: "" },
                     ],
                   },
