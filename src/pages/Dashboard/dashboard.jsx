@@ -10,6 +10,7 @@ import {
   ContactsOutlined,
   HomeFilled,
   PaperClipOutlined,
+  BellFilled,
 } from "@ant-design/icons";
 const Dashboard = () => {
   const Navigate = useNavigate();
@@ -31,8 +32,13 @@ const Dashboard = () => {
         <div className="dashboard_header">
           <img src={Logo} alt="logo" className="cuh_logo" />
           <div className="dashboard_logout">
-            <i class="bi bi-bell-fill"></i>
-            <button className="dashboard_button">logout</button>
+            <BellFilled
+              className="bell"
+              onClick={() => Navigate("/dashboard/notification")}
+            />
+            <button className="dashboard_button" onClick={() => Navigate("/")}>
+              logout
+            </button>
           </div>
         </div>
         {/* header part */}
@@ -45,7 +51,7 @@ const Dashboard = () => {
               <div className="dash_user">
                 <p>
                   Hello!
-                  <br /> User
+                  <br /> Rahul
                 </p>
               </div>
             </div>
@@ -58,7 +64,7 @@ const Dashboard = () => {
                 defaultSelectedKeys={[window.location.pathname]}
                 items={[
                   {
-                    label: "Home",
+                    label: "Home / Profile",
                     key: "/dashboard/home",
                     icon: <AppstoreFilled />,
                   },
@@ -66,29 +72,29 @@ const Dashboard = () => {
                     label: "Academics",
                     icon: <BookOutlined />,
                     children: [
-                      { label: "Student Subject", key: "" },
-                      { label: "Time Table", key: "" },
-                      { label: "Attendence", key: "" },
-                      { label: "Minor Program Registration", key: "" },
+                      { label: "Student Subject", key: "/a" },
+                      { label: "Time Table", key: "/b" },
+                      { label: "Attendence", key: "/c" },
+                      { label: "Minor Program Registration", key: "/d" },
                     ],
                   },
                   {
                     label: "Examination",
                     icon: <PaperClipOutlined />,
                     children: [
-                      { label: "Internal Marks Details", key: "" },
-                      { label: "Earlier Marks Details", key: "" },
-                      { label: "Current Semester Result", key: "" },
-                      { label: "Exam Marks Details", key: "" },
-                      { label: "Exam Registration", key: "" },
+                      { label: "Internal Marks Details", key: "/e" },
+                      { label: "Earlier Marks Details", key: "/f" },
+                      { label: "Current Semester Result", key: "/g" },
+                      { label: "Exam Marks Details", key: "/h" },
+                      { label: "Exam Registration", key: "/i" },
                     ],
                   },
                   {
                     label: "Hostel",
                     icon: <HomeFilled />,
                     children: [
-                      { label: "Hostel Room Detail", key: "" },
-                      { label: "Instruction Guide", key: "" },
+                      { label: "Hostel Room Detail", key: "/j" },
+                      { label: "Instruction Guide", key: "/k" },
                     ],
                   },
                   {

@@ -8,6 +8,7 @@ import Login from "./pages/Login/login";
 import Dashboard from "./pages/Dashboard/dashboard";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/contact";
+import Notification from "./pages/Notification/notification";
 import { Content } from "antd/es/layout/layout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,6 +21,7 @@ root.render(
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="home" element={<Home />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="notification" element={<Notification />} />
         </Route>
       </Routes>
     </BrowserRouter>
