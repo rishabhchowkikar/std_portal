@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
-import Logo from "../../assests/logocuh.png";
+import Logo from "../../assests/ncuhlogo.png";
 import Image from "../../assests/tree.jpg";
 import "./dashboard.css";
 import { Menu } from "antd";

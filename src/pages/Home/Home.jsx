@@ -1,13 +1,13 @@
 import { Table } from "antd";
+import { useNavigate } from "react-router-dom";
 import "./home.css";
-import graph from "../../assests/Attendance - Semester Graph.png";
+
 import userData from "./dataUser.json";
 const columns = [
   {
     title: "Student Name",
     dataIndex: "name",
     key: "name",
-    // render: (text) => <a>{text}</a>,
   },
   {
     title: "Roll No.",
@@ -45,29 +45,49 @@ const columns = [
 // const App = () => (
 //   <Table columns={columns} dataSource={userData} className="home_table" />
 // );
-function App() {
+function Home() {
+  const Navigate = useNavigate();
   return (
     <div className="home_section">
       <h2 className="home_profile">Student Profile:</h2>
       <Table columns={columns} dataSource={userData} className="home_table" />
       <div className="home_cards">
         <div className="home_opinion">
-          <h2>Review by Teacher's</h2>
+          <h2>Review </h2>
           <p>
-            Hardworking personality, full of enthusisam <br />
-            and great Progress but can't able to maintain its Prgress
-            continously
+            Excellent Personality with Funcky looks. Little bit shy during
+            lectures, but quickly responses....
           </p>
+          <button
+            className="home_opinion_button"
+            onClick={() => Navigate("/dashboard/review")}
+          >
+            Read More
+          </button>
         </div>
         <div className="home_graph">
           <h2>Attendance - Semester Graph</h2>
-          <img src={graph} alt="graph" height={210} width={400} />
+          <p>
+            <i>
+              ( Attendence Graph form <br />
+              Ist Semester upto Current Semester)
+            </i>
+          </p>
+          <button onClick={() => Navigate("/dashboard/attendance")}>
+            Click Here
+          </button>
         </div>
         <div className="home_paper">
-          <h2>Academics Performance</h2>
+          <h2>Subject Credits</h2>
+          <p>
+            <i>(Subject Credit is show below using Pie-Chart )</i>
+          </p>
+          <button onClick={() => Navigate("/dashboard/chart")}>
+            Click Here
+          </button>
         </div>
       </div>
     </div>
   );
 }
-export default App;
+export default Home;
