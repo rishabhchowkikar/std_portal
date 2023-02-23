@@ -15,9 +15,9 @@ const columns = [
     key: "roll_no",
   },
   {
-    title: "Institution",
-    dataIndex: "institution",
-    key: "institution",
+    title: "School",
+    dataIndex: "school",
+    key: "school",
   },
   {
     title: "Semester",

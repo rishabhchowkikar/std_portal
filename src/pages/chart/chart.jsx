@@ -1,5 +1,5 @@
 import React from "react";
-import pie from "../../assests/pie-chart (1).png";
+import pie from "../../assests/meta-chart (1).png";
 import "./chart.css";
 function chart() {
   return (

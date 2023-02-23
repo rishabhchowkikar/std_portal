@@ -37,7 +37,7 @@ const Dashboard = () => {
               onClick={() => Navigate("/dashboard/notification")}
             />
             <button className="dashboard_button" onClick={() => Navigate("/")}>
-              logout
+              Log Out
             </button>
           </div>
         </div>
